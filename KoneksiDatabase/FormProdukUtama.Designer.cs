@@ -32,8 +32,10 @@
             this.btnTambah = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnHapus = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnTutup = new System.Windows.Forms.Button();
             this.judul = new System.Windows.Forms.Label();
+            this.btnKategori = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,14 +80,15 @@
             this.btnHapus.UseVisualStyleBackColor = true;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
-            // btnRefresh
+            // btnTutup
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(673, 415);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnTutup.Location = new System.Drawing.Point(684, 415);
+            this.btnTutup.Name = "btnTutup";
+            this.btnTutup.Size = new System.Drawing.Size(75, 23);
+            this.btnTutup.TabIndex = 4;
+            this.btnTutup.Text = "Tutup";
+            this.btnTutup.UseVisualStyleBackColor = true;
+            this.btnTutup.Click += new System.EventHandler(this.btnTutup_Click);
             // 
             // judul
             // 
@@ -97,13 +100,35 @@
             this.judul.TabIndex = 5;
             this.judul.Text = "DATA PRODUK";
             // 
+            // btnKategori
+            // 
+            this.btnKategori.Location = new System.Drawing.Point(695, 38);
+            this.btnKategori.Name = "btnKategori";
+            this.btnKategori.Size = new System.Drawing.Size(75, 23);
+            this.btnKategori.TabIndex = 6;
+            this.btnKategori.Text = "Kategori";
+            this.btnKategori.UseVisualStyleBackColor = true;
+            this.btnKategori.Click += new System.EventHandler(this.btnKategori_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(592, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormProdukUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnKategori);
             this.Controls.Add(this.judul);
-            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnTutup);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnTambah);
@@ -123,7 +148,9 @@
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnHapus;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnTutup;
         private System.Windows.Forms.Label judul;
+        private System.Windows.Forms.Button btnKategori;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -56,8 +56,7 @@ namespace KoneksiDatabase
                 try
                 {
                     conn.Open();
-                    string query = @"SELECT NamaProduk, Harga, Stok, KategoriId
-FROM Produk WHERE Id = @id";
+                    string query = @"SELECT NamaProduk, Harga, Stok, FROM Produk WHERE Id = @id";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@id", ProdukId);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -96,7 +95,24 @@ FROM Produk WHERE Id = @id";
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            errorProvider1.Clear();
+            bool valid = true;
+            if (string.IsNullOrWhiteSpace(txtNamaProduk.Text))
+            {
+                errorProvider1.SetError(txtNamaProduk, "Nama produk tidak boleh kosong.");
+                valid = false;
+            }
+            if (!decimal.TryParse(txtNamaHarga.Text, out decimal harga) || harga < 0)
+            {
+                errorProvider1.SetError(txtNamaHarga, "Harga harus berupa angka positif.");
+                valid = false;
+            }
+            if (!int.TryParse(txtStok.Text, out int stok) || stok < 0)
+            {
+                errorProvider1.SetError(txtStok, "Stok harus berupa angka ≥ 0.");
+                valid = false;
+            }
+            if (!valid) return;
             if (string.IsNullOrWhiteSpace(txtNamaProduk.Text))
             {
                 MessageBox.Show("Nama produk tidak boleh kosong.", "Validasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);

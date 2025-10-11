@@ -164,6 +164,24 @@ namespace KoneksiDatabase
                 }
             }
         }
+
+        private void btnKategori_Click(object sender, EventArgs e)
+        {
+            FormKategori munculin = new FormKategori();
+            munculin.ShowDialog();
+        }
+
+        private void btnTutup_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadDataProduk();
+            MessageBox.Show("Data telah berhasil diperbarui.", "Refresh Selesai", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    
     }
 }
 

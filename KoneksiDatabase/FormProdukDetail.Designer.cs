@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNamaProduk = new System.Windows.Forms.TextBox();
             this.NamaProduk = new System.Windows.Forms.Label();
@@ -41,6 +42,10 @@
             this.cmbKategori = new System.Windows.Forms.ComboBox();
             this.deskripsi = new System.Windows.Forms.Label();
             this.txtDeskripsi = new System.Windows.Forms.TextBox();
+            this.v = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.v)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -161,6 +166,14 @@
             this.txtDeskripsi.Size = new System.Drawing.Size(353, 22);
             this.txtDeskripsi.TabIndex = 13;
             // 
+            // v
+            // 
+            this.v.ContainerControl = this;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormProdukDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,6 +195,8 @@
             this.Name = "FormProdukDetail";
             this.Text = "FormProdukDetail";
             this.Load += new System.EventHandler(this.FormProdukDetail_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.v)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +217,7 @@
         private System.Windows.Forms.ComboBox cmbKategori;
         private System.Windows.Forms.Label deskripsi;
         private System.Windows.Forms.TextBox txtDeskripsi;
+        private System.Windows.Forms.ErrorProvider v;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
