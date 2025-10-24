@@ -16,7 +16,7 @@ namespace KoneksiDatabase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormProdukUtama());
+            Application.Run(new FormTransaksiPenjualan());
         }
     }
 }
