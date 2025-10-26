@@ -16,6 +16,7 @@ namespace KoneksiDatabase
         public FormKategori()
         {
             InitializeComponent();
+
         }
         private void LoadDataKategori()
         {
